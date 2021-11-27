@@ -1,0 +1,51 @@
+|area| nombre| precio| cantidad
+|abarrotes|frijoles|20|5
+|abarrotes|salsa|24|10
+|abarrotes|galletas|10|5
+|abarrotes|maruchan|15|20
+|abarrotes|zucaritas|40|5
+|enlatados|coca cola|15|15
+|enlatados|lechera|28|5
+|enlatados|chicharos|23|5
+|enlatados|sardina|20|10
+|enlatados|atun|15|20
+|lacteos|mantequilla|30|5
+|lacteos|queso|50|5
+|lacteos|yogurt|12|5
+|lacteos|litro de leche|20|5
+|lacteos|yakult|7|50
+|hogar|salvo|34|10
+|hogar|suavitel|23|5
+|hogar|cloro|15|10
+|hogar|pinol|30|10
+|hogar|fabuloso|20|10
+|frutas y verduras|mango|5|50
+|frutas y verduras|aguacate|9|50
+|frutas y verduras|lechuga|10|10
+|frutas y verduras|melon|20|5
+|frutas y verduras|sandia|30|5
+|bebidas|jarritos|15|20
+|bebidas|jugo|15|20
+|bebidas|agua|10|20
+|bebidas|coca cola|15|20
+|bebidas|cerveza|20|100
+|productos de limpieza|charola|10|20
+|productos de limpieza|cubeta|20|20
+|productos de limpieza|franela|10|20
+|productos de limpieza|trapeador|20|20
+|productos de limpieza|escoba|20|20
+|higiene personal|pasta dental|30|10
+|higiene personal|desodorante|70|10
+|higiene personal|crema corporal|45|5
+|higiene personal|shampo|50|5
+|higiene personal|jabon corporal|20|10
+|congelados|carne de res|150|5
+|congelados|camaron|200|2
+|congelados|papas para freir|50|2
+|congelados|helado|20|5
+|congelados|paletas de hielo|10|10
+|botanas|platanos fritos|15|15
+|botanas|cacahuates|12|15
+|botanas|chetos|12|15
+|botanas|papas fritas|15|15
+|botanas|churrumaiz|10|15
