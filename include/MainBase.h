@@ -10,3 +10,6 @@
 #define KEYSL 16
 #define PASSL 64
 #define CLEAN "clear"
+#define PASSPATH "data/passwd.db"
+#define USERPATH "data/users.db"
+#define STOCKPATH "data/database.db"
