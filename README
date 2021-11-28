@@ -57,6 +57,9 @@ getchar();
 
 de este modo no tendra conflictos con otras partes del programa
 
+En caso de usar github no olviden pedirme que les de acceso a sus cuentas de github al repositorio aparte de hacer todos sus commits
+a la branch main, si quieren crear mas branchs no los detengo pero no creo que sea conveniente ahorita
+
 Ultima nota, este programa no compilara correctamentea menos que todas las funciones del BackEnd.c esten completas
 ademas de que en su IDE o compilador deberan agregar las siguientes opciones
 
