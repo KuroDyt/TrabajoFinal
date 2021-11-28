@@ -30,6 +30,8 @@ void progstop();
 
 int compofst(char *str1, char *str2, int lth);
 
+void printdata(int id);
+
 void setzeros(void *body, int counts){
     int i = 0;
     for(i = 0; i < counts; i++){
@@ -111,4 +113,35 @@ int compofst(char *str1, char *str2, int lth){
         }
     }
     return(x);
+}
+
+void printdata(int id){
+    int x = 0, check = 0, skip = 0;
+    system(CLEAN);
+    FILE *fp = fopen(USERPATH, "rb");
+    if((!fp)){
+        printf("[!]Error al abrir users.db \n");
+        printf("[!]Antes de iniciar este programa favor de inicializar los valores predeterminados con DataBaseStart.exe\n");
+        printf("[!]Saliendo del programa\n");
+        progstop();
+        exit(0);
+    }
+    do{
+        if((!feof(fp)){
+            fread(&check, sizeof(int), 1, fp);
+            if((check == id)){
+
+            }
+            else{
+                fread(&skip, sizeof(int),1,fp);
+                fseak(fp, (skip * sizeof(char)), SEEK_CUR);
+            }
+        }
+        else{
+            printf("[!]Error fatal, identificador de usuario no encontrado\n");
+            printf("[!]Cerrando programa, se requiere revision de esta zona del codigo\n");
+            progstop();
+            exit(0);
+        }
+    }while(x != 1);
 }
