@@ -1,0 +1,73 @@
+Este es el repositorio del trabajo final, todas las instrucciones de lo que deben hacer estan
+en comentarios en el archivo FrontEnd.c en la carpeta source, ahi pueden repartirse 
+las funciones y el como se deben crear, pero antes de eso unas notas generales antes de continuar
+primero que nada todas las provenientes del BackEnd son del tipo void, o sea que no regresan nada
+a menos que se especifique lo contrario para lo cual deberan de guardar el valor en una variable
+del tipo que se indica, por ejemplo:
+
+funcion(); regresa un int asi que se usa asi 
+int x = 0;
+x = funcion();
+ahora x tiene el valor que regreso funcion, dependiendo el tipo de retorno de la funcion sera el 
+tipo de variable en el que se debe guardar
+
+en este programa hago mucho uso de punteros, los punteros es una forma de modificar valores de una
+variable haciendo referencia a su posicion en la memoria del programa, como tal no deberan preocuparse
+por entender eso ahora, solo respetar su uso en las funciones que lo requieran, ejemplo
+
+int valor = 0;
+
+funcion(&valor); 
+
+en este caso la funcion recibe como argumento el puntero de valor, asi que al terminar de ejecutarse
+la funcion el valor de la variable valor sera diferente, osea que antes de funcion valor valia 0, pero 
+ahora valor vale 2, o lo que la funcion haya hecho
+
+int valor = 0;
+
+funciones(valor);
+
+en este caso a la funcion solo recibio el valor que esta dentro de la variable valor asi que este no ha
+sido modificada por lo tanto valor sigue siendo 0 tanto antes como despues de la ejecucion de funcion
+
+
+los arrays simples son tambien llamados vectores y siempre seran del tipo array[tamaño];
+
+todas las librerias que puedan necesitarse ya vienen incluidas asi que no hay necesidad de agregar mas
+pero en caso de que sea necesario avisenme para agregarlas
+
+Esta estrictamente prohibido usar system("pause") pues es algo que solo aparece en windows y que no 
+dejara que revise correctamente el codigo cuando lo compile, en caso de que quieran usarla hay una
+funcion con el mismo comportamiento progstop(); es de tipo void y no recibe argumentos, hara casi
+lo mismo que system("pause"); 
+
+scanf de preferencia no lo usen, cree una funciones para leer datos de strings llamada centry, esta recibe
+el puntero de un vector char, el tamaño del vector y un puntero a un int que sera el tamaño de lo introducido
+
+centry(&array, tamaño, cantidad);
+
+para la lectura de valores simples como int float o char, etc sigan usando scanf pero inmediatamente
+despues pongan un getchar(); o si no el programa no se detendra donde debe, esto es debido a que scanf deja
+abierto la entrada de datos y no la cierra hasta que llega con un getchar o getc, aqui un ejemplo de 
+como usar scanf
+
+int x = 0;
+scanf("%d",&x);
+getchar();
+
+de este modo no tendra conflictos con otras partes del programa
+
+Ultima nota, este programa no compilara correctamentea menos que todas las funciones del BackEnd.c esten completas
+ademas de que en su IDE o compilador deberan agregar las siguientes opciones
+
+-Iinclude    //esto hace que se incluyan las librerias ubicadas en la carpeta include
+
+source/BackEnd.c source/FrontEnd.c source/md5hash.c  //Esto agrega estaticamente la informacion de esos archivos para que se incluyan al compilar 
+
+-lm  //esto agrega la libreria math.h que en algunos compiladores no viene incluida por defecto
+
+-o bin/Program.exe //esto indica el nombre y carpeta donde se guardara el archivo compilado 
+
+de este modo todos los argumentos de su compilador quedara asi
+
+"Su compilador" -Iinclude -lm source/BackEnd.c source/FrontEnd.c source/md5hash.c StartPoint.c -o bin/Program.exe
